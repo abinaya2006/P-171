@@ -25,6 +25,8 @@ AFRAME.registerComponent("create-markers", {
                 model.setAttribute("gltf-model", `url(${toy.model_url})`);
                 model.setAttribute("gesture-handler", {});
                 model.setAttribute("animation-mixer", {});
+                model.setAttribute("visible", false);
+
                 marker.appendChild(model);
 
                 var mainPlane = document.createElement("a-plane");
@@ -36,6 +38,8 @@ AFRAME.registerComponent("create-markers", {
                 });
                 mainPlane.setAttribute("width", 2.3);
                 mainPlane.setAttribute("height", 2.5);
+                mainPlane.setAttribute("visible", false);
+
                 marker.appendChild(mainPlane);
 
                 var titlePlane = document.createElement("a-plane");
